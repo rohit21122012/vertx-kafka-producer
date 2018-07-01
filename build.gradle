@@ -1,0 +1,33 @@
+plugins {
+    id 'io.vertx.vertx-plugin' version '0.0.4'
+}
+
+ext {
+    vertxVersion = '3.5.2'
+    kafkaVersion = '1.1.0'
+}
+
+repositories {
+    mavenLocal()
+    jcenter()
+    maven { url "https://plugins.gradle.org/m2/" }
+}
+
+version = '1.0.0-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+dependencies {
+    compile "io.vertx:vertx-core:$vertxVersion"
+    compile "io.vertx:vertx-unit:$vertxVersion"
+    compile "io.vertx:vertx-web:$vertxVersion"
+    compile "org.apache.kafka:kafka-clients:$kafkaVersion"
+}
+
+vertx {
+    mainVerticle = 'com.rohit.kafka.producer.MainVerticle'
+    config = 'src/main/conf/conf.json'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.2.1'
+}

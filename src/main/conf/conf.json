@@ -1,0 +1,24 @@
+{
+    "http.port" : 8082,
+    "kafka.producer" : {
+        "bootstrap.servers": "localhost:9092",
+        "acks": "all",
+        "buffer.memory": "63554432",
+        "compression.type": "snappy",
+        "batch.size": "32000",
+        "connections.max.idle.ms": "540000",
+        "linger.ms": "20",
+        "max.request.size": "5242880",
+        "receive.buffer.bytes": "4194304",
+        "request.timeout.ms": "30000",
+        "send.buffer.bytes": "4194304",
+        "max.in.flight.requests.per.connection": "1024",
+        "metadata.max.age.ms": "1200000",
+        "metrics.num.samples": "2",
+        "metrics.sample.window.ms": "30000",
+        "reconnect.backoff.ms": "10",
+        "retry.backoff.ms": "100",
+        "key.serializer": "org.apache.kafka.common.serialization.StringSerializer",
+        "value.serializer": "org.apache.kafka.common.serialization.ByteArraySerializer"
+    }
+}
